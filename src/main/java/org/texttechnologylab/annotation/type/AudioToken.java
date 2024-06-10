@@ -16,7 +16,10 @@ import javax.sound.sampled.AudioFileFormat;
 import javax.sound.sampled.AudioFormat;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
-import java.io.*;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.OutputStream;
 import java.lang.invoke.CallSite;
 import java.lang.invoke.MethodHandle;
 
@@ -139,12 +142,17 @@ public class AudioToken extends MultimediaElement {
     try {
       byte[] audioData = org.apache.commons.codec.binary.Base64.decodeBase64(encodedBase64Audio);
 
-      InputStream is = new ByteArrayInputStream(audioData);
+      OutputStream stream = new FileOutputStream("temp" + (int)getTimeStart() + (int)getTimeEnd());
+      stream.write(audioData);
+      stream.close();
 
-      inputStream = AudioSystem.getAudioInputStream(is);
+      File tempFile = new File("temp" + (int)getTimeStart() + (int)getTimeEnd());
+      tempFile.deleteOnExit();
 
-      AudioFileFormat fileFormat = AudioSystem.getAudioFileFormat(inputStream);
+      AudioFileFormat fileFormat = AudioSystem.getAudioFileFormat(tempFile);
       AudioFormat audioFormat = fileFormat.getFormat();
+
+      inputStream = AudioSystem.getAudioInputStream(tempFile);
 
       float bytesPerSecond = audioFormat.getFrameRate() * audioFormat.getFrameSize();
 
