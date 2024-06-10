@@ -16,6 +16,7 @@ import javax.sound.sampled.AudioFileFormat;
 import javax.sound.sampled.AudioFormat;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
@@ -160,7 +161,11 @@ public class AudioToken extends MultimediaElement {
       long audioFramesToCopy = (int)Math.ceil((getTimeEnd() - getTimeStart()) * audioFormat.getFrameRate());
 
       cutStream = new AudioInputStream(inputStream, audioFormat, audioFramesToCopy);
-      result = cutStream.readAllBytes();
+
+      ByteArrayOutputStream byteOutput = new ByteArrayOutputStream();
+      AudioSystem.write(cutStream, fileFormat.getType(), byteOutput);
+      result = byteOutput.toByteArray();
+
     } catch (Exception e) {
       e.printStackTrace();
     }
