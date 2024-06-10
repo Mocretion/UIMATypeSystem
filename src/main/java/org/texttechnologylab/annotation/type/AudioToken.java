@@ -139,13 +139,12 @@ public class AudioToken extends MultimediaElement {
     try {
       byte[] audioData = org.apache.commons.codec.binary.Base64.decodeBase64(encodedBase64Audio);
 
-      InputStream targetStream = new ByteArrayInputStream(audioData);
-      AudioInputStream audioStream = AudioSystem.getAudioInputStream(targetStream);
+      InputStream is = new ByteArrayInputStream(audioData);
 
-      AudioFileFormat fileFormat = AudioSystem.getAudioFileFormat(audioStream);
+      inputStream = AudioSystem.getAudioInputStream(is);
+
+      AudioFileFormat fileFormat = AudioSystem.getAudioFileFormat(inputStream);
       AudioFormat audioFormat = fileFormat.getFormat();
-
-      inputStream = AudioSystem.getAudioInputStream(audioStream);
 
       float bytesPerSecond = audioFormat.getFrameRate() * audioFormat.getFrameSize();
 
