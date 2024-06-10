@@ -224,6 +224,12 @@
             <artifactId>dkpro-core-api-resources-asl</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>1.17.0</version>
+        </dependency>
+
     </dependencies>
 
 </project>

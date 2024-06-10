@@ -12,6 +12,13 @@ import org.apache.uima.cas.impl.TypeSystemImpl;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.JCasRegistry;
 
+import javax.sound.sampled.AudioFileFormat;
+import javax.sound.sampled.AudioFormat;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.OutputStream;
 import java.lang.invoke.CallSite;
 import java.lang.invoke.MethodHandle;
 
@@ -124,8 +131,55 @@ public class AudioToken extends MultimediaElement {
    */
   public void setValue(String v) {
     _setStringValueNfc(wrapGetIntCatchException(_FH_value), v);
-  }    
-    
+  }
+
+  public AudioInputStream getCoveredMultimedia(String encodedBase64Audio, String audioFileExtension){
+    AudioInputStream inputStream = null;
+    AudioInputStream cutStream = null;
+    try {
+      byte[] audioData = org.apache.commons.codec.binary.Base64.decodeBase64(encodedBase64Audio);
+
+      OutputStream stream = new FileOutputStream("temp." + audioFileExtension);
+      stream.write(audioData);
+      stream.close();
+
+      File tempFile = new File("temp." + audioFileExtension);
+      tempFile.deleteOnExit();
+
+      AudioFileFormat fileFormat = AudioSystem.getAudioFileFormat(tempFile);
+      AudioFormat audioFormat = fileFormat.getFormat();
+
+      inputStream = AudioSystem.getAudioInputStream(tempFile);
+
+      float bytesPerSecond = audioFormat.getFrameRate() * audioFormat.getFrameSize();
+
+      inputStream.skip((int)(getTimeStart() * bytesPerSecond));
+
+      long audioFramesToCopy = (int)Math.ceil((getTimeEnd() - getTimeStart()) * audioFormat.getFrameRate());
+
+      cutStream = new AudioInputStream(inputStream, audioFormat, audioFramesToCopy);
+
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+
+
+    if (inputStream != null)
+      try {
+        inputStream.close();
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
+
+    if (cutStream != null)
+      try {
+        cutStream.close();
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
+
+    return cutStream;}
+
   }
 
     
