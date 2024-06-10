@@ -133,17 +133,19 @@ public class AudioToken extends MultimediaElement {
     _setStringValueNfc(wrapGetIntCatchException(_FH_value), v);
   }
 
-  public AudioInputStream getCoveredMultimedia(String encodedBase64Audio, String audioFileExtension){
+  public byte[] getCoveredMultimedia(String encodedBase64Audio, String audioFileExtension){
+
+    byte[] result = null;
     AudioInputStream inputStream = null;
     AudioInputStream cutStream = null;
     try {
       byte[] audioData = org.apache.commons.codec.binary.Base64.decodeBase64(encodedBase64Audio);
 
-      OutputStream stream = new FileOutputStream("temp." + audioFileExtension);
+      OutputStream stream = new FileOutputStream("temp" + getTimeStart() + getTimeEnd() + "." + audioFileExtension);
       stream.write(audioData);
       stream.close();
 
-      File tempFile = new File("temp." + audioFileExtension);
+      File tempFile = new File("temp" + getTimeStart() + getTimeEnd() + "." + audioFileExtension);
       tempFile.deleteOnExit();
 
       AudioFileFormat fileFormat = AudioSystem.getAudioFileFormat(tempFile);
@@ -158,7 +160,7 @@ public class AudioToken extends MultimediaElement {
       long audioFramesToCopy = (int)Math.ceil((getTimeEnd() - getTimeStart()) * audioFormat.getFrameRate());
 
       cutStream = new AudioInputStream(inputStream, audioFormat, audioFramesToCopy);
-
+      result = cutStream.readAllBytes();
     } catch (Exception e) {
       e.printStackTrace();
     }
@@ -178,7 +180,7 @@ public class AudioToken extends MultimediaElement {
         e.printStackTrace();
       }
 
-    return cutStream;}
+    return result;}
 
   }
 
