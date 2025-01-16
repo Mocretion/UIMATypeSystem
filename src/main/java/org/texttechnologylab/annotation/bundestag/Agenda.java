@@ -1,7 +1,7 @@
 
 
    
-/* Apache UIMA v3 - First created by JCasGen Thu Jan 16 20:47:10 CET 2025 */
+/* Apache UIMA v3 - First created by JCasGen Thu Jan 16 21:08:43 CET 2025 */
 
 package org.texttechnologylab.annotation.bundestag;
  
@@ -16,12 +16,11 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.JCasRegistry;
 
 
-import org.apache.uima.jcas.cas.FSArray;
 import org.apache.uima.jcas.cas.AnnotationBase;
 
 
 /** 
- * Updated by JCasGen Thu Jan 16 20:47:10 CET 2025
+ * Updated by JCasGen Thu Jan 16 21:08:43 CET 2025
  * XML source: D:/UniCode/Java/UIMATypeSystem/src/main/resources/desc/type/BundestagProtocol.xml
  * @generated */
 public class Agenda extends AnnotationBase {
@@ -53,14 +52,11 @@ public class Agenda extends AnnotationBase {
    *   Feature Offsets *
    * *******************/ 
    
-  public final static String _FeatName_speeches = "speeches";
   public final static String _FeatName_title = "title";
   public final static String _FeatName_index = "index";
 
 
   /* Feature Adjusted Offsets */
-  private final static CallSite _FC_speeches = TypeSystemImpl.createCallSite(Agenda.class, "speeches");
-  private final static MethodHandle _FH_speeches = _FC_speeches.dynamicInvoker();
   private final static CallSite _FC_title = TypeSystemImpl.createCallSite(Agenda.class, "title");
   private final static MethodHandle _FH_title = _FC_title.dynamicInvoker();
   private final static CallSite _FC_index = TypeSystemImpl.createCallSite(Agenda.class, "index");
@@ -102,48 +98,6 @@ public class Agenda extends AnnotationBase {
   private void readObject() {/*default - does nothing empty block */}
      
  
-    
-  //*--------------*
-  //* Feature: speeches
-
-  /** getter for speeches - gets 
-   * @generated
-   * @return value of the feature 
-   */
-  @SuppressWarnings("unchecked")
-  public FSArray<Speech> getSpeeches() { 
-    return (FSArray<Speech>)(_getFeatureValueNc(wrapGetIntCatchException(_FH_speeches)));
-  }
-    
-  /** setter for speeches - sets  
-   * @generated
-   * @param v value to set into the feature 
-   */
-  public void setSpeeches(FSArray<Speech> v) {
-    _setFeatureValueNcWj(wrapGetIntCatchException(_FH_speeches), v);
-  }    
-    
-    
-  /** indexed getter for speeches - gets an indexed value - 
-   * @generated
-   * @param i index in the array to get
-   * @return value of the element at index i 
-   */
-  @SuppressWarnings("unchecked")
-  public Speech getSpeeches(int i) {
-     return (Speech)(((FSArray<Speech>)(_getFeatureValueNc(wrapGetIntCatchException(_FH_speeches)))).get(i));
-  } 
-
-  /** indexed setter for speeches - sets an indexed value - 
-   * @generated
-   * @param i index in the array to set
-   * @param v value to set into the array 
-   */
-  @SuppressWarnings("unchecked")
-    public void setSpeeches(int i, Speech v) {
-    ((FSArray<Speech>)(_getFeatureValueNc(wrapGetIntCatchException(_FH_speeches)))).set(i, v);
-  }  
-   
     
   //*--------------*
   //* Feature: title

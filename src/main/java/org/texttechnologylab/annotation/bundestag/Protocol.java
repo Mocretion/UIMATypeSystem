@@ -1,7 +1,7 @@
 
 
    
-/* Apache UIMA v3 - First created by JCasGen Thu Jan 16 20:47:10 CET 2025 */
+/* Apache UIMA v3 - First created by JCasGen Thu Jan 16 21:08:43 CET 2025 */
 
 package org.texttechnologylab.annotation.bundestag;
  
@@ -16,12 +16,11 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.JCasRegistry;
 
 
-import org.apache.uima.jcas.cas.FSArray;
 import org.apache.uima.jcas.cas.AnnotationBase;
 
 
 /** 
- * Updated by JCasGen Thu Jan 16 20:47:10 CET 2025
+ * Updated by JCasGen Thu Jan 16 21:08:43 CET 2025
  * XML source: D:/UniCode/Java/UIMATypeSystem/src/main/resources/desc/type/BundestagProtocol.xml
  * @generated */
 public class Protocol extends AnnotationBase {
@@ -53,15 +52,12 @@ public class Protocol extends AnnotationBase {
    *   Feature Offsets *
    * *******************/ 
    
-  public final static String _FeatName_agendas = "agendas";
   public final static String _FeatName_electionPeriod = "electionPeriod";
   public final static String _FeatName_sessionNumber = "sessionNumber";
   public final static String _FeatName_date = "date";
 
 
   /* Feature Adjusted Offsets */
-  private final static CallSite _FC_agendas = TypeSystemImpl.createCallSite(Protocol.class, "agendas");
-  private final static MethodHandle _FH_agendas = _FC_agendas.dynamicInvoker();
   private final static CallSite _FC_electionPeriod = TypeSystemImpl.createCallSite(Protocol.class, "electionPeriod");
   private final static MethodHandle _FH_electionPeriod = _FC_electionPeriod.dynamicInvoker();
   private final static CallSite _FC_sessionNumber = TypeSystemImpl.createCallSite(Protocol.class, "sessionNumber");
@@ -105,48 +101,6 @@ public class Protocol extends AnnotationBase {
   private void readObject() {/*default - does nothing empty block */}
      
  
-    
-  //*--------------*
-  //* Feature: agendas
-
-  /** getter for agendas - gets 
-   * @generated
-   * @return value of the feature 
-   */
-  @SuppressWarnings("unchecked")
-  public FSArray<Agenda> getAgendas() { 
-    return (FSArray<Agenda>)(_getFeatureValueNc(wrapGetIntCatchException(_FH_agendas)));
-  }
-    
-  /** setter for agendas - sets  
-   * @generated
-   * @param v value to set into the feature 
-   */
-  public void setAgendas(FSArray<Agenda> v) {
-    _setFeatureValueNcWj(wrapGetIntCatchException(_FH_agendas), v);
-  }    
-    
-    
-  /** indexed getter for agendas - gets an indexed value - 
-   * @generated
-   * @param i index in the array to get
-   * @return value of the element at index i 
-   */
-  @SuppressWarnings("unchecked")
-  public Agenda getAgendas(int i) {
-     return (Agenda)(((FSArray<Agenda>)(_getFeatureValueNc(wrapGetIntCatchException(_FH_agendas)))).get(i));
-  } 
-
-  /** indexed setter for agendas - sets an indexed value - 
-   * @generated
-   * @param i index in the array to set
-   * @param v value to set into the array 
-   */
-  @SuppressWarnings("unchecked")
-    public void setAgendas(int i, Agenda v) {
-    ((FSArray<Agenda>)(_getFeatureValueNc(wrapGetIntCatchException(_FH_agendas)))).set(i, v);
-  }  
-   
     
   //*--------------*
   //* Feature: electionPeriod

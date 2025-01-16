@@ -1,7 +1,7 @@
 
 
    
-/* Apache UIMA v3 - First created by JCasGen Thu Jan 16 20:47:10 CET 2025 */
+/* Apache UIMA v3 - First created by JCasGen Thu Jan 16 21:08:43 CET 2025 */
 
 package org.texttechnologylab.annotation.bundestag;
  
@@ -20,7 +20,7 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** 
- * Updated by JCasGen Thu Jan 16 20:47:10 CET 2025
+ * Updated by JCasGen Thu Jan 16 21:08:43 CET 2025
  * XML source: D:/UniCode/Java/UIMATypeSystem/src/main/resources/desc/type/BundestagProtocol.xml
  * @generated */
 public class SpeechSection extends Annotation {

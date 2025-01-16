@@ -29,6 +29,47 @@
         </typeDescription>
 
         <typeDescription>
+            <name>org.texttechnologylab.annotation.bundestag.Agenda</name>
+            <description/>
+            <supertypeName>uima.cas.AnnotationBase</supertypeName>
+            <features>
+                <featureDescription>
+                    <name>title</name>
+                    <description/>
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>index</name>
+                    <description/>
+                    <rangeTypeName>uima.cas.Integer</rangeTypeName>
+                </featureDescription>
+            </features>
+        </typeDescription>
+
+        <typeDescription>
+            <name>org.texttechnologylab.annotation.bundestag.Protocol</name>
+            <description/>
+            <supertypeName>uima.cas.AnnotationBase</supertypeName>
+            <features>
+                <featureDescription>
+                    <name>electionPeriod</name>
+                    <description/>
+                    <rangeTypeName>uima.cas.Integer</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>sessionNumber</name>
+                    <description/>
+                    <rangeTypeName>uima.cas.Integer</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>date</name>
+                    <description/>
+                    <rangeTypeName>uima.cas.Double</rangeTypeName>
+                </featureDescription>
+            </features>
+        </typeDescription>
+
+        <typeDescription>
             <name>org.texttechnologylab.annotation.bundestag.Speech</name>
             <description/>
             <supertypeName>uima.tcas.Annotation</supertypeName>
@@ -54,58 +95,15 @@
                     <description/>
                     <rangeTypeName>uima.cas.Integer</rangeTypeName>
                 </featureDescription>
-            </features>
-        </typeDescription>
-
-        <typeDescription>
-            <name>org.texttechnologylab.annotation.bundestag.Agenda</name>
-            <description/>
-            <supertypeName>uima.cas.AnnotationBase</supertypeName>
-            <features>
                 <featureDescription>
-                    <name>speeches</name>
+                    <name>agenda</name>
                     <description/>
-                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
-                    <elementType>org.texttechnologylab.annotation.bundestag.Speech</elementType>
+                    <rangeTypeName>org.texttechnologylab.annotation.bundestag.Agenda</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>title</name>
+                    <name>protocol</name>
                     <description/>
-                    <rangeTypeName>uima.cas.String</rangeTypeName>
-                </featureDescription>
-                <featureDescription>
-                    <name>index</name>
-                    <description/>
-                    <rangeTypeName>uima.cas.Integer</rangeTypeName>
-                </featureDescription>
-            </features>
-        </typeDescription>
-
-        <typeDescription>
-            <name>org.texttechnologylab.annotation.bundestag.Protocol</name>
-            <description/>
-            <supertypeName>uima.cas.AnnotationBase</supertypeName>
-            <features>
-                <featureDescription>
-                    <name>agendas</name>
-                    <description/>
-                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
-                    <elementType>org.texttechnologylab.annotation.bundestag.Agenda</elementType>
-                </featureDescription>
-                <featureDescription>
-                    <name>electionPeriod</name>
-                    <description/>
-                    <rangeTypeName>uima.cas.Integer</rangeTypeName>
-                </featureDescription>
-                <featureDescription>
-                    <name>sessionNumber</name>
-                    <description/>
-                    <rangeTypeName>uima.cas.Integer</rangeTypeName>
-                </featureDescription>
-                <featureDescription>
-                    <name>date</name>
-                    <description/>
-                    <rangeTypeName>uima.cas.Double</rangeTypeName>
+                    <rangeTypeName>org.texttechnologylab.annotation.bundestag.Protocol</rangeTypeName>
                 </featureDescription>
             </features>
         </typeDescription>

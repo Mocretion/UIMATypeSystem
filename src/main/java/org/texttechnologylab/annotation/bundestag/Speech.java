@@ -1,7 +1,7 @@
 
 
    
-/* Apache UIMA v3 - First created by JCasGen Thu Jan 16 20:47:10 CET 2025 */
+/* Apache UIMA v3 - First created by JCasGen Thu Jan 16 21:08:43 CET 2025 */
 
 package org.texttechnologylab.annotation.bundestag;
  
@@ -21,7 +21,7 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** 
- * Updated by JCasGen Thu Jan 16 20:47:10 CET 2025
+ * Updated by JCasGen Thu Jan 16 21:08:43 CET 2025
  * XML source: D:/UniCode/Java/UIMATypeSystem/src/main/resources/desc/type/BundestagProtocol.xml
  * @generated */
 public class Speech extends Annotation {
@@ -57,6 +57,8 @@ public class Speech extends Annotation {
   public final static String _FeatName_speechSections = "speechSections";
   public final static String _FeatName_id = "id";
   public final static String _FeatName_index = "index";
+  public final static String _FeatName_agenda = "agenda";
+  public final static String _FeatName_protocol = "protocol";
 
 
   /* Feature Adjusted Offsets */
@@ -68,6 +70,10 @@ public class Speech extends Annotation {
   private final static MethodHandle _FH_id = _FC_id.dynamicInvoker();
   private final static CallSite _FC_index = TypeSystemImpl.createCallSite(Speech.class, "index");
   private final static MethodHandle _FH_index = _FC_index.dynamicInvoker();
+  private final static CallSite _FC_agenda = TypeSystemImpl.createCallSite(Speech.class, "agenda");
+  private final static MethodHandle _FH_agenda = _FC_agenda.dynamicInvoker();
+  private final static CallSite _FC_protocol = TypeSystemImpl.createCallSite(Speech.class, "protocol");
+  private final static MethodHandle _FH_protocol = _FC_protocol.dynamicInvoker();
 
    
   /** Never called.  Disable default constructor
@@ -219,6 +225,48 @@ public class Speech extends Annotation {
    */
   public void setIndex(int v) {
     _setIntValueNfc(wrapGetIntCatchException(_FH_index), v);
+  }    
+    
+   
+    
+  //*--------------*
+  //* Feature: agenda
+
+  /** getter for agenda - gets 
+   * @generated
+   * @return value of the feature 
+   */
+  public Agenda getAgenda() { 
+    return (Agenda)(_getFeatureValueNc(wrapGetIntCatchException(_FH_agenda)));
+  }
+    
+  /** setter for agenda - sets  
+   * @generated
+   * @param v value to set into the feature 
+   */
+  public void setAgenda(Agenda v) {
+    _setFeatureValueNcWj(wrapGetIntCatchException(_FH_agenda), v);
+  }    
+    
+   
+    
+  //*--------------*
+  //* Feature: protocol
+
+  /** getter for protocol - gets 
+   * @generated
+   * @return value of the feature 
+   */
+  public Protocol getProtocol() { 
+    return (Protocol)(_getFeatureValueNc(wrapGetIntCatchException(_FH_protocol)));
+  }
+    
+  /** setter for protocol - sets  
+   * @generated
+   * @param v value to set into the feature 
+   */
+  public void setProtocol(Protocol v) {
+    _setFeatureValueNcWj(wrapGetIntCatchException(_FH_protocol), v);
   }    
     
   }
