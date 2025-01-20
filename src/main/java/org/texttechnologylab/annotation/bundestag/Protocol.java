@@ -1,7 +1,7 @@
 
 
    
-/* Apache UIMA v3 - First created by JCasGen Thu Jan 16 21:08:43 CET 2025 */
+/* Apache UIMA v3 - First created by JCasGen Mon Jan 20 13:29:59 CET 2025 */
 
 package org.texttechnologylab.annotation.bundestag;
  
@@ -20,7 +20,7 @@ import org.apache.uima.jcas.cas.AnnotationBase;
 
 
 /** 
- * Updated by JCasGen Thu Jan 16 21:08:43 CET 2025
+ * Updated by JCasGen Mon Jan 20 13:29:59 CET 2025
  * XML source: D:/UniCode/Java/UIMATypeSystem/src/main/resources/desc/type/BundestagProtocol.xml
  * @generated */
 public class Protocol extends AnnotationBase {

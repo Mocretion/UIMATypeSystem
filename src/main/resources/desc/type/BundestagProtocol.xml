@@ -6,6 +6,54 @@
     <vendor/>
     <types>
         <typeDescription>
+            <name>org.texttechnologylab.annotation.bundestag.Speaker</name>
+            <description/>
+            <supertypeName>uima.cas.AnnotationBase</supertypeName>
+            <features>
+                <featureDescription>
+                    <name>id</name>
+                    <description/>
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>firstName</name>
+                    <description/>
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>lastName</name>
+                    <description/>
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>birthdate</name>
+                    <description/>
+                    <rangeTypeName>uima.cas.Double</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>party</name>
+                    <description/>
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>role</name>
+                    <description/>
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>biography</name>
+                    <description/>
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>image</name>
+                    <description/>
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                </featureDescription>
+            </features>
+        </typeDescription>
+
+        <typeDescription>
             <name>org.texttechnologylab.annotation.bundestag.SpeechSection</name>
             <description/>
             <supertypeName>uima.tcas.Annotation</supertypeName>
@@ -21,27 +69,9 @@
                     <rangeTypeName>uima.cas.String</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>speakerId</name>
+                    <name>speaker</name>
                     <description/>
-                    <rangeTypeName>uima.cas.String</rangeTypeName>
-                </featureDescription>
-            </features>
-        </typeDescription>
-
-        <typeDescription>
-            <name>org.texttechnologylab.annotation.bundestag.Agenda</name>
-            <description/>
-            <supertypeName>uima.cas.AnnotationBase</supertypeName>
-            <features>
-                <featureDescription>
-                    <name>title</name>
-                    <description/>
-                    <rangeTypeName>uima.cas.String</rangeTypeName>
-                </featureDescription>
-                <featureDescription>
-                    <name>index</name>
-                    <description/>
-                    <rangeTypeName>uima.cas.Integer</rangeTypeName>
+                    <rangeTypeName>org.texttechnologylab.annotation.bundestag.Speaker</rangeTypeName>
                 </featureDescription>
             </features>
         </typeDescription>
@@ -75,11 +105,6 @@
             <supertypeName>uima.tcas.Annotation</supertypeName>
             <features>
                 <featureDescription>
-                    <name>value</name>
-                    <description/>
-                    <rangeTypeName>uima.cas.String</rangeTypeName>
-                </featureDescription>
-                <featureDescription>
                     <name>speechSections</name>
                     <description/>
                     <rangeTypeName>uima.cas.FSArray</rangeTypeName>
@@ -95,10 +120,29 @@
                     <description/>
                     <rangeTypeName>uima.cas.Integer</rangeTypeName>
                 </featureDescription>
+            </features>
+        </typeDescription>
+
+        <typeDescription>
+            <name>org.texttechnologylab.annotation.bundestag.Agenda</name>
+            <description/>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+            <features>
                 <featureDescription>
-                    <name>agenda</name>
+                    <name>title</name>
                     <description/>
-                    <rangeTypeName>org.texttechnologylab.annotation.bundestag.Agenda</rangeTypeName>
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>index</name>
+                    <description/>
+                    <rangeTypeName>uima.cas.Integer</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>speeches</name>
+                    <description/>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>org.texttechnologylab.annotation.bundestag.Speech</elementType>
                 </featureDescription>
                 <featureDescription>
                     <name>protocol</name>

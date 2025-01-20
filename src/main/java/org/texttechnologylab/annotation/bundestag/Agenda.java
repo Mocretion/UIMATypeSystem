@@ -1,7 +1,7 @@
 
 
    
-/* Apache UIMA v3 - First created by JCasGen Thu Jan 16 21:08:43 CET 2025 */
+/* Apache UIMA v3 - First created by JCasGen Mon Jan 20 13:29:59 CET 2025 */
 
 package org.texttechnologylab.annotation.bundestag;
  
@@ -16,14 +16,15 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.JCasRegistry;
 
 
-import org.apache.uima.jcas.cas.AnnotationBase;
+import org.apache.uima.jcas.cas.FSArray;
+import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** 
- * Updated by JCasGen Thu Jan 16 21:08:43 CET 2025
+ * Updated by JCasGen Mon Jan 20 13:29:59 CET 2025
  * XML source: D:/UniCode/Java/UIMATypeSystem/src/main/resources/desc/type/BundestagProtocol.xml
  * @generated */
-public class Agenda extends AnnotationBase {
+public class Agenda extends Annotation {
  
   /** @generated
    * @ordered 
@@ -54,6 +55,8 @@ public class Agenda extends AnnotationBase {
    
   public final static String _FeatName_title = "title";
   public final static String _FeatName_index = "index";
+  public final static String _FeatName_speeches = "speeches";
+  public final static String _FeatName_protocol = "protocol";
 
 
   /* Feature Adjusted Offsets */
@@ -61,6 +64,10 @@ public class Agenda extends AnnotationBase {
   private final static MethodHandle _FH_title = _FC_title.dynamicInvoker();
   private final static CallSite _FC_index = TypeSystemImpl.createCallSite(Agenda.class, "index");
   private final static MethodHandle _FH_index = _FC_index.dynamicInvoker();
+  private final static CallSite _FC_speeches = TypeSystemImpl.createCallSite(Agenda.class, "speeches");
+  private final static MethodHandle _FH_speeches = _FC_speeches.dynamicInvoker();
+  private final static CallSite _FC_protocol = TypeSystemImpl.createCallSite(Agenda.class, "protocol");
+  private final static MethodHandle _FH_protocol = _FC_protocol.dynamicInvoker();
 
    
   /** Never called.  Disable default constructor
@@ -87,6 +94,18 @@ public class Agenda extends AnnotationBase {
     readObject();   
   } 
 
+
+  /** @generated
+   * @param jcas JCas to which this Feature Structure belongs
+   * @param begin offset to the begin spot in the SofA
+   * @param end offset to the end spot in the SofA 
+  */  
+  public Agenda(JCas jcas, int begin, int end) {
+    super(jcas);
+    setBegin(begin);
+    setEnd(end);
+    readObject();
+  }   
 
   /** 
    * <!-- begin-user-doc -->
@@ -137,6 +156,69 @@ public class Agenda extends AnnotationBase {
    */
   public void setIndex(int v) {
     _setIntValueNfc(wrapGetIntCatchException(_FH_index), v);
+  }    
+    
+   
+    
+  //*--------------*
+  //* Feature: speeches
+
+  /** getter for speeches - gets 
+   * @generated
+   * @return value of the feature 
+   */
+  @SuppressWarnings("unchecked")
+  public FSArray<Speech> getSpeeches() { 
+    return (FSArray<Speech>)(_getFeatureValueNc(wrapGetIntCatchException(_FH_speeches)));
+  }
+    
+  /** setter for speeches - sets  
+   * @generated
+   * @param v value to set into the feature 
+   */
+  public void setSpeeches(FSArray<Speech> v) {
+    _setFeatureValueNcWj(wrapGetIntCatchException(_FH_speeches), v);
+  }    
+    
+    
+  /** indexed getter for speeches - gets an indexed value - 
+   * @generated
+   * @param i index in the array to get
+   * @return value of the element at index i 
+   */
+  @SuppressWarnings("unchecked")
+  public Speech getSpeeches(int i) {
+     return (Speech)(((FSArray<Speech>)(_getFeatureValueNc(wrapGetIntCatchException(_FH_speeches)))).get(i));
+  } 
+
+  /** indexed setter for speeches - sets an indexed value - 
+   * @generated
+   * @param i index in the array to set
+   * @param v value to set into the array 
+   */
+  @SuppressWarnings("unchecked")
+    public void setSpeeches(int i, Speech v) {
+    ((FSArray<Speech>)(_getFeatureValueNc(wrapGetIntCatchException(_FH_speeches)))).set(i, v);
+  }  
+   
+    
+  //*--------------*
+  //* Feature: protocol
+
+  /** getter for protocol - gets 
+   * @generated
+   * @return value of the feature 
+   */
+  public Protocol getProtocol() { 
+    return (Protocol)(_getFeatureValueNc(wrapGetIntCatchException(_FH_protocol)));
+  }
+    
+  /** setter for protocol - sets  
+   * @generated
+   * @param v value to set into the feature 
+   */
+  public void setProtocol(Protocol v) {
+    _setFeatureValueNcWj(wrapGetIntCatchException(_FH_protocol), v);
   }    
     
   }

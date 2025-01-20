@@ -1,7 +1,7 @@
 
 
    
-/* Apache UIMA v3 - First created by JCasGen Thu Jan 16 21:08:43 CET 2025 */
+/* Apache UIMA v3 - First created by JCasGen Mon Jan 20 13:29:59 CET 2025 */
 
 package org.texttechnologylab.annotation.bundestag;
  
@@ -20,7 +20,7 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** 
- * Updated by JCasGen Thu Jan 16 21:08:43 CET 2025
+ * Updated by JCasGen Mon Jan 20 13:29:59 CET 2025
  * XML source: D:/UniCode/Java/UIMATypeSystem/src/main/resources/desc/type/BundestagProtocol.xml
  * @generated */
 public class SpeechSection extends Annotation {
@@ -54,7 +54,7 @@ public class SpeechSection extends Annotation {
    
   public final static String _FeatName_value = "value";
   public final static String _FeatName_textType = "textType";
-  public final static String _FeatName_speakerId = "speakerId";
+  public final static String _FeatName_speaker = "speaker";
 
 
   /* Feature Adjusted Offsets */
@@ -62,8 +62,8 @@ public class SpeechSection extends Annotation {
   private final static MethodHandle _FH_value = _FC_value.dynamicInvoker();
   private final static CallSite _FC_textType = TypeSystemImpl.createCallSite(SpeechSection.class, "textType");
   private final static MethodHandle _FH_textType = _FC_textType.dynamicInvoker();
-  private final static CallSite _FC_speakerId = TypeSystemImpl.createCallSite(SpeechSection.class, "speakerId");
-  private final static MethodHandle _FH_speakerId = _FC_speakerId.dynamicInvoker();
+  private final static CallSite _FC_speaker = TypeSystemImpl.createCallSite(SpeechSection.class, "speaker");
+  private final static MethodHandle _FH_speaker = _FC_speaker.dynamicInvoker();
 
    
   /** Never called.  Disable default constructor
@@ -157,22 +157,22 @@ public class SpeechSection extends Annotation {
    
     
   //*--------------*
-  //* Feature: speakerId
+  //* Feature: speaker
 
-  /** getter for speakerId - gets 
+  /** getter for speaker - gets 
    * @generated
    * @return value of the feature 
    */
-  public String getSpeakerId() { 
-    return _getStringValueNc(wrapGetIntCatchException(_FH_speakerId));
+  public Speaker getSpeaker() { 
+    return (Speaker)(_getFeatureValueNc(wrapGetIntCatchException(_FH_speaker)));
   }
     
-  /** setter for speakerId - sets  
+  /** setter for speaker - sets  
    * @generated
    * @param v value to set into the feature 
    */
-  public void setSpeakerId(String v) {
-    _setStringValueNfc(wrapGetIntCatchException(_FH_speakerId), v);
+  public void setSpeaker(Speaker v) {
+    _setFeatureValueNcWj(wrapGetIntCatchException(_FH_speaker), v);
   }    
     
   }
