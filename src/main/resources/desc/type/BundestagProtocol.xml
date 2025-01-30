@@ -107,7 +107,7 @@
                 <featureDescription>
                     <name>speechSections</name>
                     <description/>
-                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSList</rangeTypeName>
                     <elementType>org.texttechnologylab.annotation.bundestag.SpeechSection</elementType>
                 </featureDescription>
                 <featureDescription>
@@ -141,7 +141,7 @@
                 <featureDescription>
                     <name>speeches</name>
                     <description/>
-                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <rangeTypeName>uima.cas.FSList</rangeTypeName>
                     <elementType>org.texttechnologylab.annotation.bundestag.Speech</elementType>
                 </featureDescription>
                 <featureDescription>

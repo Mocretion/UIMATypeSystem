@@ -1,7 +1,7 @@
 
 
    
-/* Apache UIMA v3 - First created by JCasGen Mon Jan 20 13:29:59 CET 2025 */
+/* Apache UIMA v3 - First created by JCasGen Thu Jan 30 20:20:06 CET 2025 */
 
 package org.texttechnologylab.annotation.bundestag;
  
@@ -16,12 +16,12 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.JCasRegistry;
 
 
-import org.apache.uima.jcas.cas.FSArray;
+import org.apache.uima.jcas.cas.FSList;
 import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** 
- * Updated by JCasGen Mon Jan 20 13:29:59 CET 2025
+ * Updated by JCasGen Thu Jan 30 20:20:06 CET 2025
  * XML source: D:/UniCode/Java/UIMATypeSystem/src/main/resources/desc/type/BundestagProtocol.xml
  * @generated */
 public class Speech extends Annotation {
@@ -123,38 +123,18 @@ public class Speech extends Annotation {
    * @return value of the feature 
    */
   @SuppressWarnings("unchecked")
-  public FSArray<SpeechSection> getSpeechSections() { 
-    return (FSArray<SpeechSection>)(_getFeatureValueNc(wrapGetIntCatchException(_FH_speechSections)));
+  public FSList<SpeechSection> getSpeechSections() { 
+    return (FSList<SpeechSection>)(_getFeatureValueNc(wrapGetIntCatchException(_FH_speechSections)));
   }
     
   /** setter for speechSections - sets  
    * @generated
    * @param v value to set into the feature 
    */
-  public void setSpeechSections(FSArray<SpeechSection> v) {
+  public void setSpeechSections(FSList<SpeechSection> v) {
     _setFeatureValueNcWj(wrapGetIntCatchException(_FH_speechSections), v);
   }    
     
-    
-  /** indexed getter for speechSections - gets an indexed value - 
-   * @generated
-   * @param i index in the array to get
-   * @return value of the element at index i 
-   */
-  @SuppressWarnings("unchecked")
-  public SpeechSection getSpeechSections(int i) {
-     return (SpeechSection)(((FSArray<SpeechSection>)(_getFeatureValueNc(wrapGetIntCatchException(_FH_speechSections)))).get(i));
-  } 
-
-  /** indexed setter for speechSections - sets an indexed value - 
-   * @generated
-   * @param i index in the array to set
-   * @param v value to set into the array 
-   */
-  @SuppressWarnings("unchecked")
-    public void setSpeechSections(int i, SpeechSection v) {
-    ((FSArray<SpeechSection>)(_getFeatureValueNc(wrapGetIntCatchException(_FH_speechSections)))).set(i, v);
-  }  
    
     
   //*--------------*

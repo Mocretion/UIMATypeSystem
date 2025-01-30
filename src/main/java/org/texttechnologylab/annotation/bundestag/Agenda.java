@@ -1,7 +1,7 @@
 
 
    
-/* Apache UIMA v3 - First created by JCasGen Mon Jan 20 13:29:59 CET 2025 */
+/* Apache UIMA v3 - First created by JCasGen Thu Jan 30 20:20:06 CET 2025 */
 
 package org.texttechnologylab.annotation.bundestag;
  
@@ -16,12 +16,12 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.JCasRegistry;
 
 
-import org.apache.uima.jcas.cas.FSArray;
+import org.apache.uima.jcas.cas.FSList;
 import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** 
- * Updated by JCasGen Mon Jan 20 13:29:59 CET 2025
+ * Updated by JCasGen Thu Jan 30 20:20:06 CET 2025
  * XML source: D:/UniCode/Java/UIMATypeSystem/src/main/resources/desc/type/BundestagProtocol.xml
  * @generated */
 public class Agenda extends Annotation {
@@ -168,38 +168,18 @@ public class Agenda extends Annotation {
    * @return value of the feature 
    */
   @SuppressWarnings("unchecked")
-  public FSArray<Speech> getSpeeches() { 
-    return (FSArray<Speech>)(_getFeatureValueNc(wrapGetIntCatchException(_FH_speeches)));
+  public FSList<Speech> getSpeeches() { 
+    return (FSList<Speech>)(_getFeatureValueNc(wrapGetIntCatchException(_FH_speeches)));
   }
     
   /** setter for speeches - sets  
    * @generated
    * @param v value to set into the feature 
    */
-  public void setSpeeches(FSArray<Speech> v) {
+  public void setSpeeches(FSList<Speech> v) {
     _setFeatureValueNcWj(wrapGetIntCatchException(_FH_speeches), v);
   }    
     
-    
-  /** indexed getter for speeches - gets an indexed value - 
-   * @generated
-   * @param i index in the array to get
-   * @return value of the element at index i 
-   */
-  @SuppressWarnings("unchecked")
-  public Speech getSpeeches(int i) {
-     return (Speech)(((FSArray<Speech>)(_getFeatureValueNc(wrapGetIntCatchException(_FH_speeches)))).get(i));
-  } 
-
-  /** indexed setter for speeches - sets an indexed value - 
-   * @generated
-   * @param i index in the array to set
-   * @param v value to set into the array 
-   */
-  @SuppressWarnings("unchecked")
-    public void setSpeeches(int i, Speech v) {
-    ((FSArray<Speech>)(_getFeatureValueNc(wrapGetIntCatchException(_FH_speeches)))).set(i, v);
-  }  
    
     
   //*--------------*
